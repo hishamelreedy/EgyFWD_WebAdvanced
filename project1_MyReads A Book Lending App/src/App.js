@@ -3,6 +3,8 @@ import Categories from "./comps/Categories";
 import * as BooksAPI from './BooksAPI'
 import './App.css'
 import {Route} from 'react-router-dom';
+import Search from "./Search";
+import {Link} from 'react-router-dom';
 
 class BooksApp extends React.Component {
         constructor(args) {
@@ -33,6 +35,13 @@ class BooksApp extends React.Component {
   render() {
     return (
       <div className="app">
+      <Route path="/search" exact render={({history}) => (
+	                           <Search
+	                               history={history}
+				       books={this.state.books}
+	                               onCategoryChange={this.onCategoryChange}
+	                           />
+	          )}/>
 
  <Route path="/" exact render={() => (
     <div>
@@ -45,6 +54,9 @@ class BooksApp extends React.Component {
          books={this.state.books}
            />
                       }
+    <div className="open-search">
+      <Link to="/search"><button onClick={() => this.setState({ showSearchPage: true })}>Add a book</button></Link>
+  </div>
     </div>
       )}/>
 

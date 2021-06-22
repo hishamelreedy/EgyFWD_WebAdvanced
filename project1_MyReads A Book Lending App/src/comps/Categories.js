@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Booklist from './Booklist.js';
-import {Link} from 'react-router-dom';
 
 class Categories extends Component {
  	render() {
@@ -15,9 +14,7 @@ class Categories extends Component {
 			                            onCategoryChange={this.props.onCategoryChange}/>
 			         </div>
 			     </div>  
-                	     <div className="open-search">
-                                 <Link to="/search">Add a book</Link>
-                             </div>
+
 		    </div>
     } 
 }

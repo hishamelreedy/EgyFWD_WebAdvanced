@@ -28,7 +28,8 @@
 }
 
 .userHome-question-buttons:hover {
-  background-color: #ff9f1c;
+  background-color: rgb(238, 120, 120);
+  cursor: pointer;
 }
 
 .userHome-unanswer-btn {

@@ -58,7 +58,7 @@ class NewQuestion extends Component {
             <input 
               placeholder='Enter Option One Here' 
               value={optionOne}
-              className='question-option' 
+              className='question-option1' 
               onChange={this.handleChangeOptionOne}
               />
               <div className="ui horizontal divider">
@@ -67,10 +67,10 @@ class NewQuestion extends Component {
             <input 
               placeholder='Enter Option Two Here' 
               value={optionTwo}
-              className='question-option' 
+              className='question-option2' 
               onChange={this.handleChangeOptionTwo}
               />
-            <center><input type='submit' className='submit-btn'/></center>
+            <center><input type='submit' className='submit-btn' value="ADD"/></center>
           </form>
         </div>
       </Fragment>

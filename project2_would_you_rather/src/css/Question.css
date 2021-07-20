@@ -23,11 +23,19 @@
   letter-spacing: 0.5px;
 }
 
-.question-choice {
+.question-choice1 {
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 0.5px;
   margin-left: 10px;
+  background-color: rgb(238, 120, 120);
+}
+.question-choice2 {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin-left: 10px;
+  background-color: rgb(134, 255, 235);
 }
 
 .question-avatar {

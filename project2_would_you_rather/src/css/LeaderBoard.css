@@ -18,12 +18,12 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
-  border: 1px solid lightgrey;
+  border: 2px solid rgb(134, 255, 235);
   border-radius: 15px;
   padding: 40px;
   width: 900px;
   height: 100%;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 .leader-avatar {
@@ -57,6 +57,6 @@
   font-size: 30px;
   padding: 30px 15px 15px 15px;
   text-align: center;
-  background-color: lightsalmon;
+  background-color: rgb(238, 120, 120);
   border-radius: 15px;
 }

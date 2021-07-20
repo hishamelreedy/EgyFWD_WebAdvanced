@@ -20,7 +20,14 @@ h3.complete-question-title {
   font-size: 30px;
 }
 
-.question-option {
+.question-option1 {
+  width: 100%;
+  margin-top: 10px;
+  padding: 3px;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+.question-option2 {
   width: 100%;
   margin-top: 10px;
   padding: 3px;
@@ -28,8 +35,11 @@ h3.complete-question-title {
   letter-spacing: 0.5px;
 }
 
-.question-option:focus {
-  outline-color: #ff9f1c;
+.question-option1:focus {
+  outline-color: rgb(238, 120, 120);
+}
+.question-option2:focus {
+  outline-color: rgb(134, 255, 235);
 }
 
 .submit-btn {

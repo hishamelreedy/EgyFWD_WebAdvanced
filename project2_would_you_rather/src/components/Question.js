@@ -40,18 +40,20 @@ class Question extends Component {
             ? <div className="question-title">You asked:</div>
             : <div className="question-title">{this.props.author} asks:</div>}
           <h3> Would you rather...? </h3>
+          <div className="question-choice1">
           <input type='radio' name='option' value='optionOne' id='optionOne' onChange={this.handleChange}/>
-          <label className="question-choice" htmlFor='optionOne'> {this.props.optionOne} </label>
-          
+          <label className="question-choice1" htmlFor='optionOne'> {this.props.optionOne} </label>
+          </div>
           <div className="ui horizontal divider">
                 <h5> OR </h5>
               </div>
-
+              <div className="question-choice2">
           <input type='radio' name='option' value='optionTwo' id='optionTwo' onChange={this.handleChange}/> 
-          <label className="question-choice" htmlFor='optionTwo'>{this.props.optionTwo}</label>
+          <label className="question-choice2" htmlFor='optionTwo'>{this.props.optionTwo}</label>
+          </div>
           <br />
           <br />
-          <center><input className="ui basic green button" type='submit' /></center>
+          <center><input className="ui basic green button" type='submit' value="Answer"/></center>
         </form>  
         <div className="clearfix"></div>
     </div>

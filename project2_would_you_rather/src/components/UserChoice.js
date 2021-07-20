@@ -119,14 +119,10 @@ class UserChoice extends Component {
           <center><h1>Would You Rather</h1></center>
           <p className="tagline">Ask questions. Get answers. Earn points.</p>
           <img className="world-image" alt="world" src={logo} />
-          <h3 className="signin-text">please sign in</h3>
-          <div className="dropdown">
-            <button className="user-button dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              SELECT USER
-            </button>
-            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <h3 className="signin-text">select user to sign in</h3>
+          <ul aria-labelledby="dropdownMenuButton">
               {Object.keys(users).map(user => (
-                  <li 
+                  <center><li 
                     className="user-dropdown" 
                     key={users[user].id}
                     //EVENT HANDLER TO SAVE USER
@@ -135,10 +131,8 @@ class UserChoice extends Component {
                     <a className='menu-name'> 
                       {users[user].name}
                     </a>
-                  </li>
-              ))}
-            </ul>
-          </div>
+                  </li></center>
+              ))}</ul>
         </div>
       </div>
     )

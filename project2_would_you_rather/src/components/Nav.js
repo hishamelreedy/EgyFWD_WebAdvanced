@@ -20,11 +20,11 @@ class Nav extends Component {
           <Link to={'/home/' + authedUserID} className='nav-item'>
             HOME
           </Link>
-          <Link to={'/add'} className='nav-item'> 
-            NEW QUESTION
-          </Link>
           <Link to={'/leaderboard'} className='nav-item'>
             LEADER BOARD
+          </Link>
+          <Link to={'/add'} className='nav-item'> 
+            NEW QUESTION
           </Link>
           <Link to={'/'} className='nav-item' id='left-nav' onClick={this.handleLogOut}>
             <img className="nav-avatar" alt="user-avatar" src={authedUserAvatar} />

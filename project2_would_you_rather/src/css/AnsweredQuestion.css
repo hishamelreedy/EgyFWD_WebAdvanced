@@ -3,7 +3,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
-  border: 1px solid lightgrey;
+  border: 1px solid lightblue;
   border-radius: 15px;
   padding: 40px;
   width: 900px;
@@ -16,7 +16,7 @@
   border-radius:50%;
   width: 175px;
   height: 175px;
-  margin-top: 80px;
+  margin-top: 50px;
   margin-right: 10px;
   margin-left: 10px;
 }
@@ -51,7 +51,6 @@
   display:block;
   position: absolute;
   right: 0;
-  transform: rotate(20deg)
 }
 
 .title-content {
@@ -64,5 +63,5 @@
 }
 
 .progress-bar {
-  background-color: #ff9f1c;
+  background-color: rgb(238, 120, 120);
 }

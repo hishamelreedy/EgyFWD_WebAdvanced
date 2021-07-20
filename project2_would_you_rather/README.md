@@ -1,100 +1,30 @@
-# Would You Rather Project
+# WouldYouRather?
 
-This is the starter code for the final assessment project for Udacity's React & Redux course.
+### EGFWD Advanced Nanodegree Project #2
 
-The `_DATA.js` file represents a fake database and methods that let you access the data. The only thing you need to edit in the ` _DATA.js` file is the value of `avatarURL`. Each user should have an avatar, so you’ll need to add the path to each user’s avatar.
+This is a project for Udacity's React & Redux course, it is a part of Udacity's React Developer Nanodegree program. The purpose of this project is to demonstrate ability to effectively use Redux for state management in React applications.
 
-Using the provided starter code, you'll build a React/Redux front end for the application. We recommend using the [Create React App](https://github.com/facebook/create-react-app) to bootstrap the project.
+This project was built entirely from scratch using create-react-app.
 
-## Data
 
-There are two types of objects stored in our database:
+Onload the application will display a simple log in form where the user only need to select one of the existing user and click the Log In button to continue to the app.
 
-* Users
-* Questions
+Once logged in the user can navigate between Home, Leader Board and New Question pages. The user can view answered as well as unanswered questions, answer questions and see stats for the questions that have been already answered by the user. The user can submit a new question, view leader board, sign out of the app.
 
-### Users
 
-Users include:
+## Installation
 
-| Attribute    | Type             | Description           |
-|-----------------|------------------|-------------------         |
-| id                 | String           | The user’s unique identifier |
-| name          | String           | The user’s first name  and last name     |
-| avatarURL  | String           | The path to the image file |
-| questions | Array | A list of ids of the polling questions this user created|
-| answers      | Object         |  The object's keys are the ids of each question this user answered. The value of each key is the answer the user selected. It can be either `'optionOne'` or `'optionTwo'` since each question has two options.
+To get the project running on your local machine:
 
-### Questions
+* clone this repo
+* install all project dependencies with `npm install`
+* start the development server with `npm start`
 
-Questions include:
+## Added dependencies
 
-| Attribute | Type | Description |
-|-----------------|------------------|-------------------|
-| id                  | String | The question’s unique identifier |
-| author        | String | The author’s unique identifier |
-| timestamp | String | The time when the question was created|
-| optionOne | Object | The first voting option|
-| optionTwo | Object | The second voting option|
+In addition the the starter files from create-react-app following dependencies have been added:
 
-### Voting Options
-
-Voting options are attached to questions. They include:
-
-| Attribute | Type | Description |
-|-----------------|------------------|-------------------|
-| votes             | Array | A list that contains the id of each user who voted for that option|
-| text                | String | The text of the option |
-
-Your code will talk to the database via 4 methods:
-
-* `_getUsers()`
-* `_getQuestions()`
-* `_saveQuestion(question)`
-* `_saveQuestionAnswer(object)`
-
-1) `_getUsers()` Method
-
-*Description*: Get all of the existing users from the database.  
-*Return Value*: Object where the key is the user’s id and the value is the user object.
-
-2) `_getQuestions()` Method
-
-*Description*: Get all of the existing questions from the database.  
-*Return Value*: Object where the key is the question’s id and the value is the question object.
-
-3) `_saveQuestion(question)` Method
-
-*Description*: Save the polling question in the database.  
-*Parameters*:  Object that includes the following properties: `author`, `optionOneText`, and `optionTwoText`. More details about these properties:
-
-| Attribute | Type | Description |
-|-----------------|------------------|-------------------|
-| author | String | The id of the user who posted the question|
-| optionOneText| String | The text of the first option |
-| optionTwoText | String | The text of the second option |
-
-*Return Value*:  An object that has the following properties: `id`, `author`, `optionOne`, `optionTwo`, `timestamp`. More details about these properties:
-
-| Attribute | Type | Description |
-|-----------------|------------------|-------------------|
-| id | String | The id of the question that was posted|
-| author | String | The id of the user who posted the question|
-| optionOne | Object | The object has a text property and a votes property, which stores an array of the ids of the users who voted for that option|
-| optionTwo | Object | The object has a text property and a votes property, which stores an array of the ids of the users who voted for that option|
-|timestamp|String | The time when the question was created|
-
-4) `_saveQuestionAnswer(object)` Method
-
-*Description*: Save the answer to a particular polling question in the database.
-*Parameters*: Object that contains the following properties: `authedUser`, `qid`, and `answer`. More details about these properties:
-
-| Attribute | Type | Description |
-|-----------------|------------------|-------------------|
-| authedUser | String | The id of the user who answered the question|
-| qid | String | The id of the question that was answered|
-| answer | String | The option the user selected. The value should be either `"optionOne"` or `"optionTwo"`|
-
-## Contributing
-
-This repository is the starter code for *all* Udacity students. Therefore, we most likely will not accept pull requests. For details, check out [CONTRIBUTING.md](https://github.com/udacity/reactnd-project-would-you-rather-starter/blob/master/CONTRIBUTING.md).
+* redux
+* react-redux
+* react-redux-loading
+* react-router-dom

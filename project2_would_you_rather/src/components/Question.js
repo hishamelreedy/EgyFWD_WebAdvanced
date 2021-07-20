@@ -39,14 +39,19 @@ class Question extends Component {
           {authedUser.id === this.props.author
             ? <div className="question-title">You asked:</div>
             : <div className="question-title">{this.props.author} asks:</div>}
-          <h3> Would you rather... </h3>
+          <h3> Would you rather...? </h3>
           <input type='radio' name='option' value='optionOne' id='optionOne' onChange={this.handleChange}/>
           <label className="question-choice" htmlFor='optionOne'> {this.props.optionOne} </label>
-          <br />
+          
+          <div className="ui horizontal divider">
+                <h5> OR </h5>
+              </div>
+
           <input type='radio' name='option' value='optionTwo' id='optionTwo' onChange={this.handleChange}/> 
           <label className="question-choice" htmlFor='optionTwo'>{this.props.optionTwo}</label>
           <br />
-          <input className="question-button" type='submit' />
+          <br />
+          <center><input className="ui basic green button" type='submit' /></center>
         </form>  
         <div className="clearfix"></div>
     </div>

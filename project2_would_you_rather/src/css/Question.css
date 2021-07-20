@@ -19,13 +19,13 @@
 
 .question-title {
   font-size: 18px;
-  font-weight: 200;
+  font-weight: 400;
   letter-spacing: 0.5px;
 }
 
 .question-choice {
   font-size: 20px;
-  font-weight: 200;
+  font-weight: 400;
   letter-spacing: 0.5px;
   margin-left: 10px;
 }

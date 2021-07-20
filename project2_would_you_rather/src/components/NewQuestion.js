@@ -61,7 +61,9 @@ class NewQuestion extends Component {
               className='question-option' 
               onChange={this.handleChangeOptionOne}
               />
-            <center><h3 className='complete-question-title'> or </h3></center>
+              <div className="ui horizontal divider">
+                <h5> OR </h5>
+              </div>
             <input 
               placeholder='Enter Option Two Here' 
               value={optionTwo}

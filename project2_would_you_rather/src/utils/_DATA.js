@@ -119,6 +119,7 @@ let questions = {
   },
 }
 //CREATES SELECT USER VARIABLE TO ASSIGN TO A USER
+// eslint-disable-next-line
 let selectUser = null
 
 function generateUID () {

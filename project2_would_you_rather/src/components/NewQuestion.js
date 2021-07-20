@@ -53,7 +53,6 @@ class NewQuestion extends Component {
       <Fragment>
         <Nav avatar={authedUserAvatar}/>
         <div className="new-question-full-div">
-          <h2 className='complete-question-title'>Create New Question</h2>
           <form className='new-question-body' onSubmit={this.handleSubmit}>
             <h1 className='title'> Would you rather... </h1>
             <input 
@@ -62,14 +61,14 @@ class NewQuestion extends Component {
               className='question-option' 
               onChange={this.handleChangeOptionOne}
               />
-            <h3 className='complete-question-title'> or </h3>
+            <center><h3 className='complete-question-title'> or </h3></center>
             <input 
               placeholder='Enter Option Two Here' 
               value={optionTwo}
               className='question-option' 
               onChange={this.handleChangeOptionTwo}
               />
-            <input type='submit' className='submit-btn'/>
+            <center><input type='submit' className='submit-btn'/></center>
           </form>
         </div>
       </Fragment>

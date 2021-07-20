@@ -19,7 +19,6 @@ class Question extends Component {
           {authedUser.id === author
             ? <div className="question-title">Asked by You:</div>
             : <div className="question-title">{author} asked:</div>}
-          <h3> Results </h3>
           <br />
           {optionOneVotes.includes(Object.values(authedUser)[0])
           ? <div className='answered-div'>

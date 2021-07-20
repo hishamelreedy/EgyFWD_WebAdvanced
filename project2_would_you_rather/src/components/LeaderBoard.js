@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 import '../css/LeaderBoard.css'
 import Nav from './Nav'
-import crown from '../images/leader.png'
 
 class LeaderBoard extends Component {
 
@@ -18,7 +17,6 @@ class LeaderBoard extends Component {
     return(
       <div className="leader-full-body">
         <Nav />
-        <img className="crown-img" alt="crown" src={crown} /> 
         <h2 className="leader-title">LEADER BOARD</h2>
         {userArray.map(user => (
           <div key={user.id} className="leader-item">
@@ -28,8 +26,8 @@ class LeaderBoard extends Component {
               </div>
               <div className="col-md-5 leader-body">
                 <h3 className="leader-name">{user.name}</h3>
+                <p className="result-text"> Questions Asked:   {user.questionsResults}</p>
                 <p className="result-text" style={{marginTop: '15px'}}> Answered Questions: {user.answeredResults}</p>
-                <p className="result-text"> Queestions Asked:   {user.questionsResults}</p>
               </div>
               <div className="col-md-3 total-score">
                 <p> Total Score: </p>

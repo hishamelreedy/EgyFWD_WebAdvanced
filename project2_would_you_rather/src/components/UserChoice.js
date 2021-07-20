@@ -4,8 +4,7 @@ import { Redirect } from "react-router";
 import { saveAuthedUser } from '../actions/authedUser'
 import '../css/UserChoice.css'
 import Particles from 'react-particles-js'
-import logo from '../images/wyr_logo-01.png'
-import world from '../images/world-01.png'
+import logo from '../images/world-01.png'
 
 class UserChoice extends Component {
   state = {
@@ -117,10 +116,10 @@ class UserChoice extends Component {
           }}
         />
         <div className="info-box">
-          <img className="logo-image" alt="logo" src={logo} />
+          <center><h1>Would You Rather</h1></center>
           <p className="tagline">Ask questions. Get answers. Earn points.</p>
-          <img className="world-image" alt="world" src={world} />
-          <h3 className="signin-text">Please sign in to continue.</h3>
+          <img className="world-image" alt="world" src={logo} />
+          <h3 className="signin-text">please sign in</h3>
           <div className="dropdown">
             <button className="user-button dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               SELECT USER

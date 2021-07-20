@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { Link } from "react-router-dom";
 import { saveAuthedUser } from '../actions/authedUser'
 import '../css/Nav.css'
-import logo from '../images/wyr_logo-01.png'
 
 class Nav extends Component {
   handleLogOut = (e) => {
@@ -15,7 +14,7 @@ class Nav extends Component {
 
     return (
     <div className='full-nav'>
-      <img className='nav-logo' alt='logo' src={logo} />
+      <h1>Would You Rather</h1>
       <nav className='nav'>
         <ul>
           <Link to={'/home/' + authedUserID} className='nav-item'>

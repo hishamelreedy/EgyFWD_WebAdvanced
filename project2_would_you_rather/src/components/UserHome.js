@@ -43,7 +43,7 @@ class UserHome extends Component {
       <div className='userHome-full'>
         <Nav />
         <div className="userHome-question-buttons-div">
-          <button className="userHome-question-buttons userHome-unanswer-btn" onClick={this.renderUnansweredQuestions}>QUESTIONS TO ANSWER</button>
+          <button className="userHome-question-buttons userHome-unanswer-btn" onClick={this.renderUnansweredQuestions}>UNANSWERED QUESTIONS</button>
           <button className="userHome-question-buttons userHome-answer-btn" onClick={this.renderAnsweredQuestions}>ANSWERED QUESTIONS</button>
         </div>
 

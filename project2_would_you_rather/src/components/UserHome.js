@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 import Question from './Question'
 import AnsweredQuestion from './AnsweredQuestion'
-import '../css/UserHome.css'
 import { getAuthedUser } from '../actions/authedUser'
 
 class UserHome extends Component {
@@ -40,11 +39,12 @@ class UserHome extends Component {
     }
 
     return (
-      <div className='userHome-full'>
+      <div className='ui grid'>
         <Nav />
-        <div className="userHome-question-buttons-div">
-          <button className="userHome-question-buttons userHome-unanswer-btn" onClick={this.renderUnansweredQuestions}>UNANSWERED QUESTIONS</button>
-          <button className="userHome-question-buttons userHome-answer-btn" onClick={this.renderAnsweredQuestions}>ANSWERED QUESTIONS</button>
+        <div className="twelve wide stretched column">
+        <div className="ui two item menu">
+          <button className="item" onClick={this.renderUnansweredQuestions}>UNANSWERED QUESTIONS</button>
+          <button className="item" onClick={this.renderAnsweredQuestions}>ANSWERED QUESTIONS</button>
         </div>
 
         {showUnansweredQuestions === true && unAnsweredQuestions.length === 0
@@ -79,6 +79,7 @@ class UserHome extends Component {
                 />
             ))
           }
+        </div>
         </div>
       </div>
     )

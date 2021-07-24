@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { Redirect } from 'react-router'
 import Nav from './Nav'
 import { addQuestion } from '../actions/questions'
-import '../css/NewQuestion.css'
 
 class NewQuestion extends Component {
   state = {
@@ -50,30 +49,36 @@ class NewQuestion extends Component {
     }
 
     return(
+      <div className="ui grid">
       <Fragment>
         <Nav avatar={authedUserAvatar}/>
-        <div className="new-question-full-div">
-          <form className='new-question-body' onSubmit={this.handleSubmit}>
+        <div className="twelve wide stretched column">
+          <form className='ui form' onSubmit={this.handleSubmit}>
             <h1 className='title'> Would you rather... </h1>
+            <div class="field">
             <input 
               placeholder='Enter Option One Here' 
               value={optionOne}
               className='question-option1' 
               onChange={this.handleChangeOptionOne}
               />
+              </div>
               <div className="ui horizontal divider">
                 <h5> OR </h5>
               </div>
+              <div class="field">
             <input 
               placeholder='Enter Option Two Here' 
               value={optionTwo}
               className='question-option2' 
               onChange={this.handleChangeOptionTwo}
               />
-            <center><input type='submit' className='submit-btn' value="ADD"/></center>
+              </div>
+            <center><input type='submit' className='ui button' value="ADD"/></center>
           </form>
-        </div>
+          </div>
       </Fragment>
+      </div>
     )
   }
 }

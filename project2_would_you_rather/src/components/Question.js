@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { savingQuestionAnswer } from '../actions/questions'
-import '../css/Question.css'
 
 class Question extends Component {
   state = {
@@ -31,25 +30,27 @@ class Question extends Component {
     const { users, authedUser } = this.props
 
     return(
-      <div className="question-full-div">
-        <div>
-          <img className="question-avatar" alt="user-avatar" src={Object.values(users)[2]} /> 
+      <div className="ui segment">
+        <div className="image">
+          <img className="ui small circular image" alt="user-avatar" src={Object.values(users)[2]} /> 
         </div>
         <form className="question-form" onSubmit={this.handleSubmit}>
           {authedUser.id === this.props.author
-            ? <div className="question-title">You asked:</div>
-            : <div className="question-title">{this.props.author} asks:</div>}
+            ? <h1 className="header">You asked:</h1>
+            : <h1 className="header">{this.props.author} asks:</h1>}
+            <div className="description">
           <h3> Would you rather...? </h3>
-          <div className="question-choice1">
+          <div className="ui radio checkbox">
           <input type='radio' name='option' value='optionOne' id='optionOne' onChange={this.handleChange}/>
-          <label className="question-choice1" htmlFor='optionOne'> {this.props.optionOne} </label>
+          <label><h5 className="header" htmlFor='optionOne'> {this.props.optionOne} </h5></label>
           </div>
           <div className="ui horizontal divider">
                 <h5> OR </h5>
               </div>
-              <div className="question-choice2">
+          <div className="ui radio checkbox">
           <input type='radio' name='option' value='optionTwo' id='optionTwo' onChange={this.handleChange}/> 
-          <label className="question-choice2" htmlFor='optionTwo'>{this.props.optionTwo}</label>
+          <label><h5 className="header" htmlFor='optionTwo'>{this.props.optionTwo}</h5></label>
+          </div>
           </div>
           <br />
           <br />

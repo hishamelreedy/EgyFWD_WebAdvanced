@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from "react-router-dom";
 import { saveAuthedUser } from '../actions/authedUser'
-import '../css/Nav.css'
 
 class Nav extends Component {
   handleLogOut = (e) => {
@@ -13,26 +12,33 @@ class Nav extends Component {
     const { authedUserID, authedUserAvatar } = this.props
 
     return (
-    <div className='full-nav'>
-      <h1>Would You Rather</h1>
+      <div class="four wide column">
+      <h2 className="header">Would You Rather</h2>
+      <div className="ui vertical menu">
+      <div className="item">
+      <center><img className="ui small circular image" alt="user-avatar" src={authedUserAvatar} /></center>
+      </div>
+      <div className="item">
+      <center><h3 class="header">Hello, {authedUserID}</h3></center>
+      </div>
       <nav className='nav'>
         <ul>
-          <Link to={'/home/' + authedUserID} className='nav-item'>
+          <Link to={'/home/' + authedUserID} className='item'>
             HOME
           </Link>
-          <Link to={'/leaderboard'} className='nav-item'>
+          <Link to={'/leaderboard'} className='item'>
             LEADER BOARD
           </Link>
-          <Link to={'/add'} className='nav-item'> 
+          <Link to={'/add'} className='item'> 
             NEW QUESTION
           </Link>
-          <Link to={'/'} className='nav-item' id='left-nav' onClick={this.handleLogOut}>
-            <img className="nav-avatar" alt="user-avatar" src={authedUserAvatar} />
+          <Link to={'/'} className='item' onClick={this.handleLogOut}>
             LOGOUT
           </Link>
         </ul>
       </nav>
       <div className="clearfix"></div>
+    </div>
     </div>
   )
   }

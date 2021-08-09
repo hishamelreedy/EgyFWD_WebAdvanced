@@ -31,14 +31,14 @@ class UserChoice extends Component {
     }
     
     return (
-      <div>
-      <div class="ui message">
-      <h1 class="ui dividing header">Would You Rather</h1>
+      <div style={{margin:"20% 20% 20% 20%"}}>
+      <div className="ui message">
+      <h1 className="ui dividing header">Would You Rather</h1>
 
-      <h3 class="first">Ask questions. Get answers. Earn points.</h3>
+      <h3 className="first">Ask questions. Get answers. Earn points.</h3>
 
           <h3 className="signin-text">select user to sign in</h3>
-          <div class="ui middle aligned selection list">
+          <div className="ui middle aligned selection list">
               {Object.keys(users).map(user => (
                   <div 
                     className="item" 

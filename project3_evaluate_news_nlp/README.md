@@ -1,8 +1,8 @@
 # Evaluate A News Article with Natural Language Processing
 
-4th project at [Udacity](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011) Front End Web Developer Nanodegree program.
+4th project at [Udacity](https://www.udacity.com/) Front End Web Developer Nanodegree program.
 
-This project aims to build a web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites. When a user submits a URL of an article, the web page then dispalys sentiment analysis returned from [meaningcloud API](https://www.meaningcloud.com/products/sentiment-analysis), based on the contents of the article.
+This project aims to build a web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites. When a user submits a URL of an article, the web page then displays sentiment analysis returned from [meaningcloud API](https://www.meaningcloud.com/products/sentiment-analysis), based on the contents of the article.
 
 ## Build Tools
 * HTML
@@ -60,7 +60,8 @@ npm i -D optimize-css-assets-webpack-plugin terser-webpack-plugin
 
 Command | Action
 :------------: | :-------------:
-`npm run build-prod` | Build project
+`npm run build-dev` | Build project for development
+`npm run build-prod` | Build project for production
 `npm start` | Run project
 
 8. Open browser at http://localhost:8081/

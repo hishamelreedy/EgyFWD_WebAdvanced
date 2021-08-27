@@ -2,7 +2,7 @@
 
 ### EGFWD Advanced Nanodegree Project #2
 
-This is a project for Udacity's React & Redux course, it is a part of Udacity's React Developer Nanodegree program. The purpose of this project is to demonstrate ability to effectively use Redux for state management in React applications.
+This is a project for Udacity's React & Redux course. The purpose of this project is to demonstrate ability to effectively use Redux for state management in React applications.
 
 This project was built entirely from scratch using create-react-app.
 

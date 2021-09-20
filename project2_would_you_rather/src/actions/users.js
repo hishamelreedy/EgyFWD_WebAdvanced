@@ -12,6 +12,10 @@ function getUsers (users) {
 
 export const loadingUsers = () => {
   return dispatch => {
+    const allusers= _getUsers().then(response => dispatch(getUsers(response)))
+    allusers.then((value)=>{
+      console.log("Testing-----",value.users);
+    });
     return _getUsers().then(response => dispatch(getUsers(response)))
   }
 }

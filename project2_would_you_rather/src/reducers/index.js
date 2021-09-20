@@ -10,3 +10,10 @@ export default combineReducers({
   questions,
   loadingBar: loadingBarReducer
 }) 
+
+export const testred=combineReducers({
+  authedUser,
+  users,
+  questions,
+  loadingBar: loadingBarReducer
+}) 

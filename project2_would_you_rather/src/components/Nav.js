@@ -12,14 +12,14 @@ class Nav extends Component {
     const { authedUserID, authedUserAvatar } = this.props
 
     return (
-      <div class="four wide column">
+      <div className="four wide column">
       <h2 className="header">Would You Rather</h2>
       <div className="ui vertical menu">
       <div className="item">
       <center><img className="ui small circular image" alt="user-avatar" src={authedUserAvatar} /></center>
       </div>
       <div className="item">
-      <center><h3 class="header">Hello, {authedUserID}</h3></center>
+      <center><h3 className="header">Hello, {authedUserID}</h3></center>
       </div>
       <nav className='nav'>
         <ul>

@@ -3,7 +3,7 @@ import { handleQuestionAnswer, handleSaveQuestion } from '../utils/api'
 
 export const GET_QUESTIONS = 'GET_QUESTIONS'
 export const SAVE_QUESTION = 'SAVE_QUESTION'
-export const SAVE_QUESTION_ANSWER = 'SAVE_QUESTION_ANSWER'
+export const SAVE_ANSWER = 'SAVE_ANSWER'
 
 //GETS ALL QUESTIONS
 function getQuestions (questions) {
@@ -28,22 +28,22 @@ export function saveQuestion (question) {
 }
 
 //SAVES QUESTION ANSWER OF PARTICULAR USER
-function saveQuestionAnswer ({ authedUser, qid, answer}) {
+function saveAnswer ({ authedUser, qid, answer}) {
   return {
-    type: SAVE_QUESTION_ANSWER,
+    type: SAVE_ANSWER,
     authedUser,
     qid,
     answer
   }
 }
 
-export const savingQuestionAnswer = (qid, answer) => {
+export const savingAnswer = (qid, answer) => {
   return (dispatch, getState) => {
     let { authedUser } = getState()
 
     authedUser = Object.values(authedUser)[0]
 
-    dispatch(saveQuestionAnswer({ authedUser, qid, answer }))
+    dispatch(saveAnswer({ authedUser, qid, answer }))
 
     return handleQuestionAnswer({
       authedUser,

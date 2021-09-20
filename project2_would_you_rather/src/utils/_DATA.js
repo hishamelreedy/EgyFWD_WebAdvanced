@@ -127,13 +127,13 @@ function generateUID () {
 }
 //GETS THE USER SELECTED
 export function _getUsers () {
-  return new Promise((res, rej) => {
+  return new Promise((res) => {
     setTimeout(() => res({...users}), 1000)
   })
 }
 
 export function _getQuestions () {
-  return new Promise((res, rej) => {
+  return new Promise((res) => {
     setTimeout(() => res({...questions}), 1000)
   })
 }
@@ -155,10 +155,11 @@ function formatQuestion ({ optionOneText, optionTwoText, author }) {
 }
 //SAVES THE SELECTED USER THROUGHOUT APP
 export function _saveSelectedUser (user) {
-  return new Promise((res, rej) => {
+  return new Promise((res) => {
     setTimeout(() => {
       selectUser = user;
-      res(user)}, 1000)
+      res(user);}, 1000)
+
   })
 }
 export function _saveQuestion (question) {

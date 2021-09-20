@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { savingQuestionAnswer } from '../actions/questions'
+import { savingAnswer } from '../actions/questions'
 
 class Question extends Component {
   state = {
@@ -22,7 +22,7 @@ class Question extends Component {
     if (!answer) {
       alert('Please select an answer.')
     } else {
-      dispatch(savingQuestionAnswer(questionID, answer))
+      dispatch(savingAnswer(questionID, answer))
     }
   }
 

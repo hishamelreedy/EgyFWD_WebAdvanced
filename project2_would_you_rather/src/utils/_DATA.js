@@ -153,17 +153,18 @@ function formatQuestion ({ optionOneText, optionTwoText, author }) {
     }
   }
 }
-//SAVES THE SELECTED USER THROUGHOUT APP
+//Saves Selected user
 export function _saveSelectedUser (user) {
   return new Promise((res) => {
     setTimeout(() => {
       selectUser = user;
-      res(user);}, 1000)
+      res(user);}, 100)
 
   })
 }
+//save question and attacher it to author id
 export function _saveQuestion (question) {
-  return new Promise((res, rej) => {
+  return new Promise((res) => {
     const authedUser = question.author;
     const formattedQuestion = formatQuestion(question);
 
@@ -185,9 +186,9 @@ export function _saveQuestion (question) {
     }, 1000)
   })
 }
-
+// Save answer to the question from authed user
 export function _saveQuestionAnswer ({ authedUser, qid, answer }) {
-  return new Promise((res, rej) => {
+  return new Promise((res) => {
     setTimeout(() => {
       users = {
         ...users,

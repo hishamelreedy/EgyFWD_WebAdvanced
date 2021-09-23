@@ -43,7 +43,7 @@ class UserChoice extends Component {
                   <div 
                     className="item" 
                     key={users[user].id}
-                    //EVENT HANDLER TO SAVE USER
+                    //Passing user data to class props
                     onClick={(e) => this.saveUserChoice(e, users[user], users[user].id)}>
                     <img className="ui avatar image" alt="avatar" src={users[user].avatarURL} /> 
                     <div className='content'> 
@@ -58,7 +58,7 @@ class UserChoice extends Component {
   }
 }
 
-//GRABS THE USERS AS A PROP
+//Gets users from store
 const mapStateToProps = state => {
 
   return {
@@ -66,7 +66,7 @@ const mapStateToProps = state => {
   }
 }
 
-//GRABS THE loadingUser() and saveAuthedUser FUNCTION FROM ACTIONS TO BE ABLE TO USE IN THIS COMPONENT
+//Grabs loadingUser() and saveAuthedUser Function
 const mapDispatchToProps = dispatch => {
   return {
     selectedUser: (user) => dispatch(saveAuthedUser(user)),

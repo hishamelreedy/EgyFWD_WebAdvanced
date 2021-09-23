@@ -4,7 +4,6 @@ import UserChoice from './UserChoice'
 import UserHome from './UserHome'
 import NewQuestion from './NewQuestion'
 import LeaderBoard from './LeaderBoard'
-import LoadingBar from 'react-redux-loading'
 import { connect } from 'react-redux'
 import { handleInitialData } from '../actions/shared'
 import Particles from 'react-particles-js'
@@ -18,7 +17,6 @@ class App extends Component {
     return (
       <Router>
         <Fragment>
-          <LoadingBar />
           <div className="container">
               {this.props.loading === true 
                 ? null 
